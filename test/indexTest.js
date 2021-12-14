@@ -2,7 +2,7 @@ describe('index.js', function () {
   const drivers = ['Antonia', 'Nuru', 'Amari', 'Claudia'];
 
   afterEach(function () {
-    expect(drivers, 'MAKE SURE YOUR ARRAY MANIPULATIONS ARE NON-DESTRUCTIVE').to.eql(['Antonia', 'Nuru', 'Amari', 'Mo']);
+    expect(drivers, 'MAKE SURE YOUR ARRAY MANIPULATIONS ARE NON-DESTRUCTIVE').to.eql(['Antonia', 'Nuru', 'Amari', 'Claudia']);
   });
 
   describe('returnFirstTwoDrivers()', function () {
@@ -29,7 +29,7 @@ describe('index.js', function () {
     it('allows us to invoke either function from the array', function () {
       expect(selectingDrivers[0](drivers)).to.eql(['Antonia', 'Nuru']);
 
-      expect(selectingDrivers[1](drivers)).to.eql(['Amari', 'Mo']);
+      expect(selectingDrivers[1](drivers)).to.eql(['Amari', 'Claudia']);
     });
   });
 
@@ -73,7 +73,7 @@ describe('index.js', function () {
     });
 
     it('returns the last two drivers when passed returnLastTwoDrivers() as the second argument', function () {
-      expect(selectDifferentDrivers(drivers, returnLastTwoDrivers)).to.eql(['Amari', 'Mo']);
+      expect(selectDifferentDrivers(drivers, returnLastTwoDrivers)).to.eql(['Amari', 'Claudia']);
     });
   });
 });
